@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const AppPage: React.FC = () => {
   return (
@@ -8,4 +8,4 @@ const AppPage: React.FC = () => {
   )
 }
 
-export default AppPage;
+export default AppPage

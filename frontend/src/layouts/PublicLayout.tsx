@@ -1,13 +1,20 @@
 // Layout for public routes
 
-import { Outlet } from "react-router";
+import React from 'react'
+import { Outlet } from 'react-router'
+import { Fragment } from 'react/jsx-runtime'
 
-const PublicLayout = () => {
+import AppHeader from '@/components/app/header'
+
+const PublicLayout: React.FC = () => {
   return (
-    <div>
-      <Outlet />
-    </div>
+    <Fragment>
+      <AppHeader />
+      <div className='flex flex-col h-full w-full p-8'>
+        <Outlet />
+      </div>
+    </Fragment>
   )
 }
 
-export default PublicLayout;
+export default PublicLayout
