@@ -1,0 +1,16 @@
+{
+  "name": "tennis-club",
+  "version": "1.0.0",
+  "description": "Tennis Club project",
+  "license": "ISC",
+  "author": "Federico Ibba",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "server",
+    "frontend"
+  ]
+}
