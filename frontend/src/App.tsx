@@ -1,11 +1,9 @@
-import Button from "@/components/ui/button";
-
 const App = () => {
   return (
     <div>
-      <Button>Hello World</Button>
+      <h1>Hello World</h1>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
