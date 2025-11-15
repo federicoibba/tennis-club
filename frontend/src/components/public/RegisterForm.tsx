@@ -41,16 +41,16 @@ const RegisterForm: React.FC = () => {
             <form action="#" method="post" className="space-y-4">
               <div>
                 <Label
-                  htmlFor="name-login-05"
+                  htmlFor="name"
                   className="text-sm font-medium text-foreground dark:text-foreground"
                 >
                   Name
                 </Label>
                 <Input
                   type="text"
-                  id="name-login-05"
-                  name="name-login-05"
-                  autoComplete="name-login-05"
+                  id="name"
+                  name="name"
+                  autoComplete="name"
                   placeholder="Name"
                   className="mt-2"
                 />
@@ -58,16 +58,16 @@ const RegisterForm: React.FC = () => {
 
               <div>
                 <Label
-                  htmlFor="email-login-05"
+                  htmlFor="email"
                   className="text-sm font-medium text-foreground dark:text-foreground"
                 >
                   Email
                 </Label>
                 <Input
                   type="email"
-                  id="email-login-05"
-                  name="email-login-05"
-                  autoComplete="email-login-05"
+                  id="email"
+                  name="email"
+                  autoComplete="email"
                   placeholder="ephraim@blocks.so"
                   className="mt-2"
                 />
@@ -75,16 +75,16 @@ const RegisterForm: React.FC = () => {
 
               <div>
                 <Label
-                  htmlFor="password-login-05"
+                  htmlFor="password"
                   className="text-sm font-medium text-foreground dark:text-foreground"
                 >
                   Password
                 </Label>
                 <Input
                   type="password"
-                  id="password-login-05   "
-                  name="password-login-05"
-                  autoComplete="password-login-05"
+                  id="password"
+                  name="password"
+                  autoComplete="password"
                   placeholder="Password"
                   className="mt-2"
                 />
@@ -92,16 +92,16 @@ const RegisterForm: React.FC = () => {
 
               <div>
                 <Label
-                  htmlFor="confirm-password-login-05"
+                  htmlFor="confirm-password"
                   className="text-sm font-medium text-foreground dark:text-foreground"
                 >
                   Confirm password
                 </Label>
                 <Input
                   type="password"
-                  id="confirm-password-login-05"
-                  name="confirm-password-login-05"
-                  autoComplete="confirm-password-login-05"
+                  id="confirm-password"
+                  name="confirm-password"
+                  autoComplete="confirm-password"
                   placeholder="Password"
                   className="mt-2"
                 />
@@ -110,13 +110,13 @@ const RegisterForm: React.FC = () => {
               <div className="mt-2 flex items-start">
                 <div className="flex h-6 items-center">
                   <Checkbox
-                    id="newsletter-login-05"
-                    name="newsletter-login-05"
+                    id="newsletter"
+                    name="newsletter"
                     className="size-4"
                   />
                 </div>
                 <Label
-                  htmlFor="newsletter-login-05"
+                  htmlFor="newsletter"
                   className="ml-3 text-sm leading-6 text-muted-foreground dark:text-muted-foreground"
                 >
                   Sign up to our newsletter

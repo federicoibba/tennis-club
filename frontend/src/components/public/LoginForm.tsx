@@ -29,15 +29,15 @@ const LoginForm: React.FC = () => {
           <form action={onLogin} className="mt-6 space-y-4">
             <div>
               <Label
-                htmlFor="email-login-02"
+                htmlFor="email"
                 className="text-sm font-medium text-foreground dark:text-foreground"
               >
                 Email
               </Label>
               <Input
                 type="email"
-                id="email-login-02"
-                name="email-login-02"
+                id="email"
+                name="email"
                 autoComplete="email"
                 placeholder="ephraim@blocks.so"
                 className="mt-2"
@@ -45,15 +45,15 @@ const LoginForm: React.FC = () => {
             </div>
             <div>
               <Label
-                htmlFor="password-login-02"
+                htmlFor="password"
                 className="text-sm font-medium text-foreground dark:text-foreground"
               >
                 Password
               </Label>
               <Input
                 type="password"
-                id="password-login-02"
-                name="password-login-02"
+                id="password"
+                name="password"
                 autoComplete="password"
                 placeholder="**************"
                 className="mt-2"
