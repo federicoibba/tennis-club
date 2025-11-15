@@ -1,7 +1,9 @@
+import AppRouter from '@/AppRouter'
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="min-h-screen bg-background">
+      <AppRouter />
     </div>
   )
 }
