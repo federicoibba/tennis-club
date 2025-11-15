@@ -1,7 +1,10 @@
 import React from 'react'
+import LoginForm from '@/components/public/LoginForm'
 
 const LoginPage: React.FC = () => {
-  return <h1>Login Page</h1>
+  return (
+    <LoginForm />
+  )
 }
 
 export default LoginPage

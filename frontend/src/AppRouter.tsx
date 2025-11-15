@@ -22,6 +22,7 @@ const AppRouter: React.FC = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         {/* 404 handler - nested under PublicLayout */}
+        {/* TODO remove public layout from NotFoundPage */}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
 
