@@ -6,7 +6,7 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const isAuthenticated = localStorage.getItem('token')
+  const isAuthenticated = sessionStorage.getItem('token')
 
   return isAuthenticated ? <>{children}</> : <Navigate to="/" />
 }

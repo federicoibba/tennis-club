@@ -11,7 +11,7 @@ const RegisterForm: React.FC = () => {
       <div className="flex flex-1 flex-col justify-center px-4 py-10 lg:px-6">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <h3 className="mt-2 text-center text-lg font-bold text-foreground dark:text-foreground">
-            Create new account 
+            Create new account
           </h3>
         </div>
 
@@ -37,17 +37,17 @@ const RegisterForm: React.FC = () => {
 
               <div>
                 <Label
-                  htmlFor="email"
+                  htmlFor="username"
                   className="text-sm font-medium text-foreground dark:text-foreground"
                 >
-                  Email
+                  Username
                 </Label>
                 <Input
-                  type="email"
-                  id="email"
-                  name="email"
-                  autoComplete="email"
-                  placeholder="ephraim@blocks.so"
+                  type="text"
+                  id="username"
+                  name="username"
+                  autoComplete="username"
+                  placeholder="your_username"
                   className="mt-2"
                 />
               </div>
@@ -88,11 +88,7 @@ const RegisterForm: React.FC = () => {
 
               <div className="mt-2 flex items-start">
                 <div className="flex h-6 items-center">
-                  <Checkbox
-                    id="newsletter"
-                    name="newsletter"
-                    className="size-4"
-                  />
+                  <Checkbox id="newsletter" name="newsletter" className="size-4" />
                 </div>
                 <Label
                   htmlFor="newsletter"

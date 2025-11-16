@@ -1,34 +1,48 @@
-import { isEmailValid } from '@/utils/login'
 import { useNavigate } from 'react-router'
+import useAuth from './useAuth'
+import { useState } from 'react'
 
 interface LoginForm {
   error: {
-    email: boolean
+    username: boolean
     password: boolean
+    login: boolean
   }
   onSubmit: () => void
 }
 
-const useLoginForm = (email: string, password: string): LoginForm => {
+const useLoginForm = (username: string, password: string): LoginForm => {
+  const [loginError, setLoginError] = useState(false)
+
   const navigate = useNavigate()
+  const { login } = useAuth(username, password)
 
   // Errors
-  const isEmailError = isEmailValid(email)
+  const isUsernameError = !username || username.length < 3
   const isPasswordError = !password
 
   // Submit action
-  const onSubmit = () => {
-    if (!isEmailError && !isPasswordError) {
-      localStorage.setItem('token', `${email}:${btoa(password)}`)
-      navigate('/app')
+  const onSubmit = async () => {
+    if (!isUsernameError && !isPasswordError) {
+      setLoginError(false)
+
+      const user = await login(username, password)
+
+      if (!user) {
+        setLoginError(true)
+      } else {
+        sessionStorage.setItem('token', user.accessToken)
+        navigate('/app')
+      }
     }
   }
 
   return {
     onSubmit,
     error: {
-      email: isEmailError,
+      username: isUsernameError,
       password: isPasswordError,
+      login: loginError,
     },
   }
 }

@@ -5,10 +5,10 @@ import useLoginForm from '@/hooks/useLoginForm'
 import { useState } from 'react'
 
 const LoginForm: React.FC = () => {
-  const [email, setEmail] = useState<string>('')
+  const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
-  const { error, onSubmit } = useLoginForm(email, password)
+  const { error, onSubmit } = useLoginForm(username, password)
 
   return (
     <div className="flex items-center justify-center h-full">
@@ -20,19 +20,19 @@ const LoginForm: React.FC = () => {
           <form action={onSubmit} className="mt-6 space-y-4">
             <div>
               <Label
-                htmlFor="email"
+                htmlFor="username"
                 className="text-sm font-medium text-foreground dark:text-foreground"
               >
-                Email
+                Username
               </Label>
               <Input
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                autoComplete="email"
-                placeholder="your@email.com"
+                type="text"
+                id="username"
+                name="username"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+                autoComplete="username"
+                placeholder="your_username"
                 className="mt-2"
               />
             </div>
@@ -55,13 +55,18 @@ const LoginForm: React.FC = () => {
               />
             </div>
             <Button
-              disabled={Boolean(error.email) || Boolean(error.password)}
+              disabled={Boolean(error.username) || Boolean(error.password)}
               type="submit"
               className="mt-4 w-full py-2 font-medium cursor-pointer"
             >
               Sign in
             </Button>
           </form>
+          {error.login && (
+            <p className="mt-6 text-red-500 text-sm">
+              Something went wrong during the login, please check your credentials.
+            </p>
+          )}
         </div>
       </div>
     </div>

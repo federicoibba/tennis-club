@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router'
 // Public Pages
 import HomePage from '@/pages/public/HomePage'
 import LoginPage from '@/pages/public/LoginPage'
-import RegisterPage from '@/pages/public/RegisterPage'
+// import RegisterPage from '@/pages/public/RegisterPage'
 
 // Private pages
 import AppPage from '@/pages/reserved/AppPage'
@@ -20,7 +20,7 @@ const AppRouter: React.FC = () => {
       <Route element={<PublicLayout />} path="/">
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        {/* <Route path="/register" element={<RegisterPage />} /> */}
         {/* 404 handler - nested under PublicLayout */}
         {/* TODO remove public layout from NotFoundPage */}
         <Route path="*" element={<NotFoundPage />} />
