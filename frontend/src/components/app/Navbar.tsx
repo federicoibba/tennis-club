@@ -1,20 +1,23 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router'
 import ThemeToggle from '@/components/ui/ThemeToggle'
+import { useAtom } from 'jotai'
+import { userAtom } from '@/stores'
 
 const AppHeader: React.FC = () => {
   const navigate = useNavigate()
+  const [user, setUser] = useAtom(userAtom)
 
-  const token = sessionStorage.getItem('token')
   const onLogout = () => {
     sessionStorage.removeItem('token')
+    setUser(null)
     navigate('/')
   }
 
   return (
     <nav className="flex items-center gap-4">
       <ul className="flex flex-row items-center gap-4 [&>li]:cursor-pointer">
-        {token ? (
+        {user ? (
           <>
             <li>
               <Link to="/app/courts">Courts</Link>
