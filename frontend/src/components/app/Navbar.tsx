@@ -16,6 +16,12 @@ const AppHeader: React.FC = () => {
       <ul className="flex flex-row items-center gap-4 [&>li]:cursor-pointer">
         {token ? (
           <>
+            <li>
+              <Link to="/app/courts">Courts</Link>
+            </li>
+            <li>
+              <Link to="/app/members">Members</Link>
+            </li>
             <li onClick={onLogout}>Logout</li>
           </>
         ) : (
