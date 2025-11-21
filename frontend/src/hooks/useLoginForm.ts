@@ -10,7 +10,7 @@ interface LoginForm {
     password: boolean
     login: boolean
   }
-  onSubmit: () => void
+  onSubmit: () => Promise<void>
 }
 
 const useLoginForm = (username: string, password: string): LoginForm => {
