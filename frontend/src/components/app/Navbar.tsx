@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router'
-import ThemeToggle from '@/components/ui/ThemeToggle'
 import { useAtom } from 'jotai'
+import { Link, useNavigate } from 'react-router'
+
 import { userAtom } from '@/stores'
+import AppThemeToggle from '@/components/app/ThemeToggle'
 
 const AppHeader: React.FC = () => {
   const navigate = useNavigate()
@@ -40,7 +41,7 @@ const AppHeader: React.FC = () => {
           </>
         )}
       </ul>
-      <ThemeToggle />
+      <AppThemeToggle />
     </nav>
   )
 }

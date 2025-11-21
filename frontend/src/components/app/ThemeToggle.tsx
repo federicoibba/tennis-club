@@ -1,7 +1,7 @@
 import React from 'react'
 import { Moon, Sun } from 'lucide-react'
 
-import Button from './Button'
+import Button from '../ui/Button'
 import useTheme from '@/hooks/useTheme'
 
 const ThemeToggle: React.FC = () => {

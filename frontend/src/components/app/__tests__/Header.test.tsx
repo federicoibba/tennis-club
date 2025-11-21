@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import { HashRouter } from 'react-router'
-import '@testing-library/jest-dom'
 
 import AppHeader from '@/components/app/Header'
 import { ThemeProvider } from '@/contexts/ThemeContext'
