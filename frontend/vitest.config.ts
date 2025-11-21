@@ -16,7 +16,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/main.tsx', 'src/vitest.config.ts'],
+      exclude: ['src/main.tsx', 'src/vitest.config.ts', 'src/AppRouter.tsx', 'src/types/**'],
     },
   },
 })
