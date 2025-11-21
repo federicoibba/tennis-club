@@ -1,3 +1,5 @@
+import { userAtom } from '@/stores'
+import { useAtomValue } from 'jotai'
 import type { ReactNode } from 'react'
 import { Navigate } from 'react-router'
 
@@ -6,7 +8,8 @@ interface PublicRouteProps {
 }
 
 const PublicRoute: React.FC<PublicRouteProps> = ({ children }) => {
-  const isAuthenticated = sessionStorage.getItem('token')
+  const user = useAtomValue(userAtom)
+  const isAuthenticated = user !== null
 
   return isAuthenticated ? <Navigate to="/app" /> : <>{children}</>
 }
