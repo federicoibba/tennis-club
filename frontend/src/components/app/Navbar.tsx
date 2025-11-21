@@ -25,7 +25,9 @@ const AppHeader: React.FC = () => {
             <li>
               <Link to="/app/members">Members</Link>
             </li>
-            <li onClick={onLogout}>Logout</li>
+            <li data-testid="logout-cta" onClick={onLogout}>
+              Logout
+            </li>
           </>
         ) : (
           <>
