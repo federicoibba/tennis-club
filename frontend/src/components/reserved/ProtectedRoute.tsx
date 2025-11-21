@@ -1,16 +1,17 @@
-import { userAtom } from '@/stores'
-import { useAtom } from 'jotai'
 import React from 'react'
+import { useAtomValue } from 'jotai'
 import { Navigate } from 'react-router'
+import { userAtom } from '@/stores'
 
 interface ProtectedRouteProps {
   children: React.ReactNode
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const [user] = useAtom(userAtom)
+  const user= useAtomValue(userAtom)
+  const isAuthenticated = user !== null
 
-  return user ? <>{children}</> : <Navigate to="/" />
+  return isAuthenticated ? <>{children}</> : <Navigate to="/" />
 }
 
 export default ProtectedRoute
