@@ -1,0 +1,24 @@
+# Gitpod configuration for Tennis Club project
+# This file configures port visibility for preview URLs
+
+ports:
+  # Backend API Server
+  - port: 3000
+    visibility: public
+    name: Backend API
+    description: Tennis Club Backend Server (Hono + Node.js)
+    onOpen: notify
+
+  # Frontend Development Server
+  - port: 5173
+    visibility: public
+    name: Frontend
+    description: Tennis Club Frontend (React + Vite)
+    onOpen: open-preview
+
+# VS Code extensions to install
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - bradlc.vscode-tailwindcss
