@@ -4,7 +4,7 @@ services:
         description: Tennis Club Backend API Server (Hono + Node.js) on port 3000
         commands:
             start: |
-                bash -c "source ~/.nvm/nvm.sh && cd /workspaces/tennis-club/server && npm run dev"
+                cd /workspaces/tennis-club/server && npm run dev
             ready: |
                 sleep 5
                 curl -s http://localhost:3000 >/dev/null 2>&1 && exit 0 || exit 1
@@ -16,7 +16,7 @@ services:
         description: Tennis Club Frontend Application (React + Vite) on port 5173
         commands:
             start: |
-                bash -c "source ~/.nvm/nvm.sh && cd /workspaces/tennis-club/frontend && npm run dev"
+                cd /workspaces/tennis-club/frontend && npm run dev
             ready: |
                 sleep 5
                 curl -s http://localhost:5173 >/dev/null 2>&1 && exit 0 || exit 1
